@@ -6,6 +6,8 @@ namespace Proxx.Implementations;
 public class RandomBlackHoleGenerator : IBlackHoleGenerator
 {
     // In this implementation I am using flatCellIndex as one reads a book and the numbering starts from 1
+    // The algorithm to assign black holes: loop through all the cells and calculate the probability of the cell to be a black hole as:
+    // <Black holes left to be assigned> divided by <Cells left to be assigned>
     public void PlaceBlackHoles(Board board, int blackHolesCount)
     {
         var flattenedIndexesForBlackHoles = GetFlattenedCellIndexesOfBlackHoles(board.Size, blackHolesCount);
@@ -27,7 +29,7 @@ public class RandomBlackHoleGenerator : IBlackHoleGenerator
         int totalNumberOfCells = size * size;
         var result = new List<int>(blackHolesCount);
         int unassignedBlackHolesCount = blackHolesCount;
-        Random random = new Random();//(Guid.NewGuid().GetHashCode());
+        Random random = new Random();
         for (int flatCellIndex = totalNumberOfCells; flatCellIndex > 0; flatCellIndex--)
         {
             int passingScore = flatCellIndex - unassignedBlackHolesCount;
