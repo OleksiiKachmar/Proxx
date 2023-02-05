@@ -1,4 +1,4 @@
-﻿namespace Proxx;
+﻿namespace Proxx.Domain;
 
 public abstract class Cell
 {

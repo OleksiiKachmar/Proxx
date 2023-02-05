@@ -1,11 +1,7 @@
-﻿//TODO Cover negative cases, like nulls etc
+﻿using Proxx;
+using Proxx.Abstractions;
+using Proxx.Implementations;
 
-using Proxx;
-
-
-
-
-//
 
 GameSettings gameSettings = new GameSettings()
 {

@@ -1,4 +1,6 @@
-﻿namespace Proxx;
+﻿using Proxx.Domain;
+
+namespace Proxx.Abstractions;
 
 public interface IBlackHoleGenerator
 {

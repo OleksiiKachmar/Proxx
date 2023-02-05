@@ -1,4 +1,7 @@
-﻿namespace Proxx;
+﻿using Proxx.Abstractions;
+using Proxx.Domain;
+
+namespace Proxx.Implementations;
 
 public class CounterCellGenerator : ICounterCellGenerator
 {
@@ -10,7 +13,6 @@ public class CounterCellGenerator : ICounterCellGenerator
 
     private void UpdateCounterCellValues(Board board)
     {
-
         board.ApplyToAll((cell, x, y) =>
         {
             if (cell is BlackHoleCell)
